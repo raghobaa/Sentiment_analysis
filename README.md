@@ -11,10 +11,11 @@ The dashboard supports:
 
 ## Models
 
-The app loads the following trained models:
+The app loads the following 8 best performing trained models:
 
 | Family | Models | Input length |
 | --- | --- | ---: |
+|simple ANN model|
 | CNN | Flatten, Flatten + Dropout, GlobalMax + Dropout, GlobalMax + EarlyStopping | 100 tokens |
 | LSTM | Basic, GloVe Embeddings, Own Embeddings v1, Own Embeddings v2 | 100 or 200 tokens |
 
