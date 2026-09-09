@@ -24,7 +24,9 @@ from sklearn.metrics import (
 # ─────────────────────────────────────────────────────────────────────────────
 # Paths
 # ─────────────────────────────────────────────────────────────────────────────
-BASE_DIR       = pathlib.Path(__file__).parent
+# Keep app.py in main/ while loading datasets, models, and the tokenizer from
+# the repository root one directory above it.
+BASE_DIR       = pathlib.Path(__file__).resolve().parent.parent
 IMDB_CSV       = BASE_DIR / "a1_IMDB_Dataset.csv"
 UNSEEN_CSV     = BASE_DIR / "a3_IMDb_Unseen_Reviews.csv"
 TOKENIZER_PKL  = BASE_DIR / ".tokenizer_cache.pkl"
